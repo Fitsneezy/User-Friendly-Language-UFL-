@@ -1,0 +1,74 @@
+// Initialize the UI window and set the theme
+initializeWindow()
+setTheme("DarkMode")
+
+// Multi-line comment example
+| This script demonstrates various features of UFL.
+| It includes:
+| - Variable declarations
+| - Basic arithmetic operations
+| - UI elements like buttons
+| - Conditional logic
+\\
+
+// Declare variables
+let num1 = 0
+let num2 = 0
+let result = 0
+
+// Define a function to update the display
+function updateDisplay() {
+    say("Current value: " + result)
+}
+
+// Define button actions
+button("7")
+button("8")
+button("9")
+button("/")
+button("4")
+button("5")
+button("6")
+button("*")
+button("1")
+button("2")
+button("3")
+button("-")
+button("0")
+button(".")
+button("=")
+button("+")
+
+// Handle button clicks (simplified example)
+ifthis button("7") {
+    let num1 = 7
+    say("Button 7 clicked")
+}
+orelse ifthis button("8") {
+    let num1 = 8
+    say("Button 8 clicked")
+}
+orelse ifthis button("=") {
+    // Calculate the result of an operation
+    result = num1 + num2  // Simplified example
+    updateDisplay()
+}
+orelse {
+    say("Invalid operation")
+}
+
+// Conditional logic
+ifthis num1 == 0 {
+    say("No number entered")
+}
+orelse ifthis num2 == 0 {
+    say("Second number missing")
+}
+orelse {
+    // Perform the chosen operation
+    result = num1 + num2
+    updateDisplay()
+}
+
+// End of script
+say("Script execution completed")

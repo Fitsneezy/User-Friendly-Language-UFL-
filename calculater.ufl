@@ -1,0 +1,22 @@
+// Simple Calculator Example
+
+say("Enter numbers and click operations:")
+
+button("7")
+button("8")
+button("9")
+button("/")
+button("4")
+button("5")
+button("6")
+button("*")
+button("1")
+button("2")
+button("3")
+button("-")
+button("0")
+button(".")
+button("=")
+button("+")
+
+say("Click buttons to perform operations.")

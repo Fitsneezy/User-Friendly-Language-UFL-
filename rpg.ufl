@@ -1,0 +1,32 @@
+let player_health = 100
+let player_inventory = []
+let player_stats = {
+    strength: 10,
+    agility: 5,
+    intelligence: 3
+}
+
+say("Welcome to the RPG!")
+say(Type 'help' for a list of commands.")
+
+foreverloop {
+    say("Enter a command:")
+    let command = input()
+
+    ifthis command == "help" {
+        say("Available commands: explore, fight, inventory, use [item], stats, help")
+    }
+    orelse command == "stats" {
+        say("Health: " + player_health)
+        say("Strength: " + player_stats['strength'])
+        say("Agility: " + player_stats['agility'])
+        say("Intelligence: " + player_stats['intelligence'])
+    }
+    orelse command == "inventory" {
+        say("Inventory: " + player_inventory)
+    }
+    // Add more commands here
+    orelse {
+        say("Unknown command. Type 'help' for a list of commands.")
+    }
+}
